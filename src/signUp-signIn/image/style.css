@@ -1,0 +1,36 @@
+.imageStyle {
+    margin: 20px;
+    border-radius: 40px;
+}
+
+.imageAndTextContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.top-left {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+.bottom-left {
+    position: absolute;
+    top: 90px;
+    left: 40px;
+}
+
+.button-on-image {
+    position: absolute;
+    top: 130px;
+    left: 40px;
+    width: 20%;
+    background-color: #f2f2f2;
+    color: #0A1F58;
+    padding: 14px 20px;
+    margin-top: 20px;
+    border: 1px solid #0A1F58;
+    border-radius: 25px;
+    cursor: pointer;
+}
