@@ -36,4 +36,4 @@ const SingIn = () => {
     )
 }
 
-export default SingIn;
+export default React.memo(SingIn);

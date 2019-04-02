@@ -3,9 +3,18 @@ import './style.css'
 import ImagePhoto from '../imgs/image.jpg'
 
 const Image = props => {
+
+    (function test() {
+        console.log('test');
+    })();
+
     useEffect(() => {
         console.log(props.bottonValue);
+        return () => {
+            console.log('clean up');
+        }
     });
+
     return (
         <div className = 'imageAndTextContainer'>
             <img 
@@ -13,8 +22,9 @@ const Image = props => {
                 src = {ImagePhoto} 
                 alt = 'image' 
             />
+
             {
-                (props.bottonValue === 'SING IN' ?
+                (props.bottonValue === 'SIGN IN' ?
                     <div>
                         <h1 className = 'top-left'>Hello, Friend!</h1>
                         <p className = 'bottom-left'>Enter your personal details and start journey with us</p>
@@ -27,6 +37,7 @@ const Image = props => {
                     
                 )
             }
+
             <button 
                 onClick = {() => props.handleClick()}
                 className = 'button-on-image' 
@@ -34,8 +45,9 @@ const Image = props => {
             >
                 {props.bottonValue}
             </button>
+            
         </div>
     )
 }
 
-export default Image;
+export default React.memo(Image);
